@@ -1,0 +1,166 @@
+{
+	"info": {
+		"_postman_id": "b574db4a-2458-4e8f-b803-fae7aa2d1ecd",
+		"name": "Cheap marketplace",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "9003454"
+	},
+	"item": [
+		{
+			"name": "/nft",
+			"item": [
+				{
+					"name": "/",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/nft",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"nft"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/offers",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/nft/offers",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"nft",
+								"offers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"privateKey\": \"3347addcf08db6ed226855d30f6839b44a3f5753e0affdf82d58ece3cd489903\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/nft",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"nft"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/:nftContractId/:nftContractAddress/offer",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"walletAddress\": \"0x14B695d58dCbF57F5ed997b8AF0d27D1bC7Ffb8B\",\r\n    \"erc20CurrencyAmount\": 1,\r\n    \"message\": \"Oferta random! :)\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/nft/:nftContractId/:nftContractAddress/offer",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"nft",
+								":nftContractId",
+								":nftContractAddress",
+								"offer"
+							],
+							"variable": [
+								{
+									"key": "nftContractId",
+									"value": "1"
+								},
+								{
+									"key": "nftContractAddress",
+									"value": "0xFCE9b92eC11680898c7FE57C4dDCea83AeabA3ff"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/offer/:id",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"ownerPrivateKey\": \"27e78f847c054aefffcc6c17adf0d2d9e59bf4e2842ff691fba7cd6a8c37040f\",\n    \"bidderPrivateKey\": \"3347addcf08db6ed226855d30f6839b44a3f5753e0affdf82d58ece3cd489903\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/nft/offer/:id",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"nft",
+								"offer",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "647fb7afe900d3330c55d683"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "/health",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/health",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"health"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
